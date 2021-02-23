@@ -215,7 +215,7 @@ trait NetcommerceTrait
         $transaction->amount	= request('txtAmount');
         $transaction->sub_msg	= request('sub');
         $transaction->completed = true;
-        $transaction->success	= request('RespVal') == 1 ? true : false;
+        $transaction->success	= request('RespCode') == '00' ? true : false;
         $transaction->save();
 
         return $transaction;
