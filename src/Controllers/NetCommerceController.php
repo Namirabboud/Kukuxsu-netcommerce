@@ -31,8 +31,7 @@ class NetCommerceController extends Controller
 
         }else if($type == 'BILL'){
 
-            $parameters = [];
-
+            $parameters = $this->getBillParameters($transaction);
         }
 
         $config_path = $this->getConfigPath();
