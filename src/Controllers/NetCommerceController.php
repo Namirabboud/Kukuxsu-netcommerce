@@ -65,6 +65,9 @@ class NetCommerceController extends Controller
 
             DB::commit();
 
+            if(request('err_msg'))
+                $redirect_url = route('payment-mobile-response').'?success=0&message='.$transaction->err_msg;
+
             $redirect_url = route('payment-mobile-response').'?success='.$transaction->success.'&message='.$transaction->resp_msg.' Orders Details: Order ID: '.$transaction->transaction_id.', Amount: '.number_format($transaction->amount).' '.$transaction->currency;
 
         }catch(Exception $e){

@@ -132,7 +132,7 @@ trait NetcommerceTrait
          *
          */
 
-        $parameters['txt_ScheduleStatus'] = 1;
+        $parameters['Flag_ScheduleStatus'] = 1;
 
 
 
@@ -169,7 +169,7 @@ trait NetcommerceTrait
         $parameters['txtStartPaymentDate'] = $transaction->start_date;
         $parameters['txtEndPaymentDate'] = $transaction->end_date;
 
-        $parameters['IsInstantPayment'] = 1;
+        $parameters['Flag_IsInstantPayment'] = 1;
         $parameters['txtInstantAmount'] = $transaction->amount;
         $parameters['txtInstantDescr'] = '';
         $parameters['Flag_BypassCardCheck'] = 1; //setting this to 0 will make a transaction with 1$ to check the card
