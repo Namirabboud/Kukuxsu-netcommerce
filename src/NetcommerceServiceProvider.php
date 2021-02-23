@@ -1,6 +1,6 @@
 <?php
 
-namespace Kukuxsu\Ecommerce;
+namespace Kukuxsu\Netcommerce;
 
 use Illuminate\Support\ServiceProvider;
 
