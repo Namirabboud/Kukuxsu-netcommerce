@@ -12,13 +12,13 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Kukuxsu\\Ecommerce\\": "src/"
+      "Kukuxsu\\Netcommerce\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Kukuxsu\\Ecommerce\\NetcommerceServiceProvider"
+        "Kukuxsu\\Netcommerce\\NetcommerceServiceProvider"
       ]
     }
   },
