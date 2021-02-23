@@ -37,7 +37,7 @@ class NetCommerceController extends Controller
 
         $config_path = $this->getConfigPath();
 
-        return view('base::redirect')->with(compact('parameters'),$config_path);
+        return view('base::redirect')->with(compact('parameters','config_path'));
     }
 
 
