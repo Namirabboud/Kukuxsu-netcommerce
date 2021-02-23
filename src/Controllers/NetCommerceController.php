@@ -45,7 +45,10 @@ class NetCommerceController extends Controller
     public function paymentResponse(Request $request)
     {
 
-        $transaction = $this->getTransactionInstanceByResponse_txtIndex(request('txtIndex'));
+        if(request('txtIndex'))
+            $transaction = $this->getTransactionInstanceByResponse_txtIndex(request('txtIndex'));
+        else if(request('txtScheduleID'))
+            $transaction = $this->getTransactionInstanceByResponse_txtScheduleID(request('txtScheduleID'));
 
         if(!$transaction)
             dd('Transaction instance is empty return to documentation');
