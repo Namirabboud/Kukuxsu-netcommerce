@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Kukuxsu\Netcommerce\Controllers;
 
 use Exception;
 use Carbon\Carbon;
