@@ -1,0 +1,28 @@
+{
+  "name": "kukuxsu/netcommerce",
+  "description": "netcommerce laravel package .",
+  "type": "project",
+  "license": "NAMMOURA",
+  "authors": [
+    {
+      "name": "namir abboud",
+      "email": "namiabboud@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Kukuxsu\\Ecommerce\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kukuxsu\\Ecommerce\\NetcommerceServiceProvider"
+      ]
+    }
+  },
+  "require": {
+
+  }
+}
