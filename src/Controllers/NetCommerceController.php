@@ -27,7 +27,7 @@ class NetCommerceController extends Controller
 
         if($type == 'IPAY'){
 
-            $parameters = $this->get_ipay_parameters();
+            $parameters = $this->getIpayParams($transaction);
 
         }else if($type == 'BILL'){
 
