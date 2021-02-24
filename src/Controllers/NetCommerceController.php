@@ -65,7 +65,7 @@ class NetCommerceController extends Controller
 
             DB::commit();
 
-            $redirect_url = route('payment-mobile-response').'?success='.$transaction->success.'&message='.$transaction->resp_msg.' Orders Details: Order ID: '.$transaction->transaction_id.', Amount: '.number_format($transaction->amount).' '.$transaction->currency;
+            $redirect_url = route('payment-mobile-response').'?success='.$transaction->success.'&message='.$transaction->resp_msg.' Orders Details: Order ID: '.$transaction->transaction_id.', Amount: '.number_format($transaction->amount).' '.$this->iso_to_string($transaction->currency);
 
         }catch(Exception $e){
 
@@ -76,5 +76,13 @@ class NetCommerceController extends Controller
 
 
         return redirect($redirect_url);
+    }
+
+    private function iso_to_string($iso)
+    {
+        if($iso == '840')
+            return 'USD';
+        else if($iso == '422')
+            return 'LBP';
     }
 }
